@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style/sign in&up.css">
+</head>
+
+<body>
+    <img class="img-background" src="https://i.pinimg.com/originals/6d/f3/f1/6df3f1ca6f04737eacb48d806b365843.jpg">
+    <section>
+        <div class="Sign-up">
+            <div>
+                <h1>Sign up</h1>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQCX5_wYEa6hyWoqSBOaPbaHw5Ff8Ljp0WcA&s"
+                height="250px">
+            <form class="form-2" action="Sign in.html" method="get">
+                <label>Full Name :</label>
+                <br>
+                <input type="text" id="first-name" placeholder="First and Last Name" name="first-name" required>
+                <br>
+                <label>Email :</label>
+                <br>
+                <input type="text" type="email" placeholder="Email" id="email" name="email" required>
+                <br>
+                <label>Password :</label>
+                <br>
+                <input type="password" id="password" placeholder="Password" name="password" required minlength="8">
+                <br>
+                <label>Confirm Password :</label>
+                <br>
+                <input type="password" id="confirm-password" placeholder="Confirm password" name="confirm-password"
+                    required minlength="8">
+                <br>
+                <label for="show-password" style="font-size: 14px;">Show Password</label>
+                <input type="checkbox" id="show-password"
+                    onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+                <button class="sub" type="submit">Sign up</button>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

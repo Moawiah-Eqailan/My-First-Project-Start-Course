@@ -1,0 +1,465 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    line-height: 1.6;
+    background-image: url('https://i.pinimg.com/originals/98/36/f2/9836f27d96a26f8f199c6b6d7032595d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #1c3460;
+    padding: 2px;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1900px;
+    margin: 10px;
+
+}
+
+.navbar-title a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-grow: 0.6;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #f39c12;
+    border-radius: 4px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------ Video Section -------------------------------------------------------------------*/
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 780px;
+}
+
+.video-container {
+    position: relative;
+    width: 70%;
+    border-radius: 50px;
+    /* تحديد مدى دائرية الحواف */
+    overflow: hidden;
+    /* التأكد من أن المحتوى لا يتجاوز الحواف الدائرية */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.overlay-text p {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #f39c12;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.icon-wrapper.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------- Part 2----------------------------------------------------------------------*/
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70Px;
+}
+
+.features-left,
+.features-right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-image {
+    width: 400px;
+    height: 600px;
+    text-align: center;
+
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item img {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+
+
+.feature-item p {
+    color: #666;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------- Part 3 -------------------------------------------------------------------------*/
+.im-4 {
+    margin: 0;
+    padding: 0;
+    background-color: #1d3e87;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 285px;
+    height: 190px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .play-button {
+    opacity: 1;
+}
+
+.text-content {
+    margin-left: 50px;
+    width: 50%;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    width: 60%;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: #ffd700;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ffca00;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------- Most Viewed Courses - Part 4 --------------------------------------------------------*/
+.courses-section {
+    text-align: center;
+    padding: 20px;
+    background-image: url('https://getwallpapers.com/wallpaper/full/2/8/f/537844.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 780px;
+}
+
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.course-card {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 416px;
+    height: 620px;
+    overflow: hidden;
+    text-align: left;
+    margin: 10px;
+}
+
+
+.course-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.course-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    /* تأثير تكبير الصورة */
+}
+
+.course-image:hover img {
+    transform: scale(1.05);
+    /* تكبير الصورة عند التمرير بالفأرة */
+}
+
+.featured-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffd700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.rating {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #FFD700;
+}
+
+.course-content {
+    padding: 20px;
+}
+
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #1f3e87;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+p {
+    font-size: 14px;
+    color: #000000;
+}
+
+.price-button {
+    background-color: #1f3e87;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price-button:hover {
+    background-color: #162d6d;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.price-button {
+    background-color: #1f3e87;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price-button:hover {
+    background-color: #162d6d;
+}
+
+.view-cart-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-cart-button:hover {
+    background-color: #45a049;
+}

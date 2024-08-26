@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style/sign in&up.css">
+    <script>
+        function handleLogin(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Get form elements
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if both fields are filled
+            if (email === '' || password === '') {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Optionally, add additional validation here
+
+            // If validation passes, redirect to index.html
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+
+<body>
+    <img class="img-background-Sign-in"
+        src="https://i.pinimg.com/originals/6d/f3/f1/6df3f1ca6f04737eacb48d806b365843.jpg">
+    <section>
+        <div class="Sign-in">
+            <div>
+                <h1>Sign in</h1>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQCX5_wYEa6hyWoqSBOaPbaHw5Ff8Ljp0WcA&s"
+                height="250px">
+            <form onsubmit="handleLogin(event)">
+                <label>Email :</label>
+                <br>
+                <input type="text" id="email" placeholder="Email" name="email" required>
+                <br>
+                <label>Password :</label>
+                <br>
+                <input type="password" id="password" placeholder="Password" name="password" required minlength="8">
+                <br>
+                <label for="show-password" style="font-size: 14px;">Show Password</label>
+                <input type="checkbox" id="show-password"
+                    onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'">
+                <button class="sub" type="submit" style="text-decoration: none; color: white;">Sign in</button>
+                <div class="Forgot">Forgot password?</div>
+                <div style="text-align: center;">
+                    <a href="sign up.html" style="text-decoration: none; color: #000; margin-right: 150px;">Create a new
+                        account :</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
